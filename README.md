@@ -1,7 +1,7 @@
 # Graph
 
 ## Overview
-This project demonstrates graph traversal using Depth-First Search (DFS) and Breadth-First Search (BFS) in C++. The graph is represented as an adjacency list using a `std::map` of vectors.
+This assignment demonstrates graph traversal using Depth-First Search (DFS) and Breadth-First Search (BFS) in C++. The graph is represented as an adjacency list using a `std::map` of vectors.
 
 ### Graph Used for Traversal
 The graph used for traversal is as follows:
@@ -17,8 +17,8 @@ This graph is undirected and unweighted, with nodes numbered from 1 to 7.
 - Starting from node `1`, the algorithm visits adjacent nodes recursively or using an explicit stack (for iterative implementation).
 
 ### Results
-- **Recursive DFS Traversal:** `1 -> 2 -> 4 -> 5 -> 3 -> 6 -> 7`
-- **Iterative DFS Traversal:** `1 -> 3 -> 7 -> 6 -> 2 -> 5 -> 4`
+- **Recursive DFS Traversal:** `1->2->4->5->3->6->7`
+- **Iterative DFS Traversal:** `1 2 4 5 3 6 7`
 
 ### Key Insights
 - Recursive DFS maintains a clean and straightforward structure but can run into stack overflow for deep graphs.
@@ -33,7 +33,7 @@ This graph is undirected and unweighted, with nodes numbered from 1 to 7.
 - Starting from node `1`, the algorithm processes each level sequentially using a queue.
 
 ### Results
-- **BFS Traversal:** `1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7`
+- **BFS Traversal:** `1->2->4->5->3->6->7`
 
 ### Key Insights
 - BFS is ideal for finding the shortest path in an unweighted graph.
@@ -51,7 +51,7 @@ This graph is undirected and unweighted, with nodes numbered from 1 to 7.
    - **BFS** excels in shortest-path problems in unweighted graphs.
 
 3. **Performance:**
-   - Both DFS and BFS have a time complexity of **O(V + E)** for adjacency list representation, where `V` is the number of vertices and `E` is the number of edges.
+   - Both DFS and BFS have a time complexity of `O(V + E)` for adjacency list representation, where `V` is the number of vertices and `E` is the number of edges.
 
 4. **Graph Representation:**
    - Using an adjacency list makes the implementation memory-efficient, especially for sparse graphs.
@@ -64,3 +64,11 @@ This graph is undirected and unweighted, with nodes numbered from 1 to 7.
 2. Compile the program:
    ```bash
    g++ dfs_bfs.cpp -o traversal
+
+### Functions Implemented
+- `void dfs_iterative(int start, const map<int, vector<int>> &graph)`: Performs an iterative DFS traversal starting from the given node.
+- `void dfs_recursive(int node, const map<int, vector<int>> &graph, set<int> &visited)`: Performs a recursive DFS traversal starting from the given node.
+- `void bfs(int start, const map<int, vector<int>> &graph)`: Performs a BFS traversal starting from the given node.
+
+### Usage
+To use the graph traversal functions, include the `graph.cpp` file in your project and call the desired function with the appropriate parameters.
