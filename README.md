@@ -5,7 +5,6 @@ This project demonstrates graph traversal using Depth-First Search (DFS) and Bre
 
 ### Graph Used for Traversal
 The graph used for traversal is as follows:
-1 - 2 - 4 | | 3 5 | | 6 - 7
 
 This graph is undirected and unweighted, with nodes numbered from 1 to 7.
 
